@@ -112,7 +112,7 @@ ul.nav-row {
 }
 
 .nav-row li:hover {
- cursor:pointer
+ cursor:pointer;
 }
 
 /* NavBar Brand CSS */
@@ -244,4 +244,33 @@ ul.nav-row {
   cursor: pointer;
   background-color: #0e0e0e17;
   border-radius: 24px;
+}
+
+/* Responsive CSS */
+@media screen and (max-width:767px) {
+
+  .nav-container ul {
+    display: none;
+  }
+  .nav-row {
+    justify-content: space-between;
+  }
+  .nav-search {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:514px){
+  .nav-container {
+    flex-direction: row;
+
+  }
+.nav-links:last-child {
+  display: none;
+}
+.nav-links {
+  width: 100%;
+  justify-content: space-between;
+}
 }
