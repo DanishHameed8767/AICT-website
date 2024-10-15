@@ -1,0 +1,247 @@
+:root {
+  --navy: #091057;
+  --blue: #024caa;
+  --orange: #ec8305;
+  --grey: #dbd3d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+}
+/* Font CSS */
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Navbar CSS */
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid #0e0e0e2e;
+  padding-top: 10px;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+}
+
+ul.nav-row {
+  justify-content: center;
+  height: 40px;
+}
+
+.nav-row li {
+  list-style: none;
+  margin:0 30px;
+  font-size: medium;
+}
+
+.nav-row li:hover {
+ cursor:pointer
+}
+
+/* NavBar Brand CSS */
+
+.nav-brand {
+ align-content: center;
+ text-align: center;
+}
+
+.nav-brand a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  color: var(--orange);
+}
+
+/* Navbar Search Bar CSS */
+
+.nav-search {
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--navy);
+  border-radius: 30px;
+}
+
+.nav-search input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  padding: 0 8px;
+  border-radius: 30px 0 0 30px;
+  margin-right: 5px;
+}
+
+.nav-search input:focus {
+  outline: 1px solid var(--blue);
+  outline-offset: 5px;
+}
+
+.nav-search input:focus ~ .search-icon > .icon-circle,
+.nav-search input:hover ~ .search-icon > .icon-circle {
+  height: 45px;
+  margin-right: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.nav-search .search-icon {
+  width: 50px;
+  border: none;
+  align-content: center;
+  text-align: center;
+}
+
+.nav-search .icon-circle {
+  background-color: var(--orange);
+  transition: all 200ms;
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 5px;
+  align-content: center;
+  text-align: center;
+}
+
+.nav-search .fa-magnifying-glass {
+  color: white;
+}
+
+/* Navbar Links CSS */
+
+.nav-links {
+  display: flex;
+  margin: 0 10px;
+}
+
+.fa-heart,
+.fa-bag-shopping {
+  color: black;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  align-content: center;
+  border-radius: 20%;
+  transition: all 200ms;
+}
+.fa-heart:hover,
+.fa-bag-shopping:hover {
+  background-color: #0e0e0e17;
+  border-radius: 50%;
+}
+
+.nav-links a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.nav-links button {
+  font-size: small;
+  color: black;
+  height: 40px;
+  width: 80px;
+  border: none;
+  background: none;
+  border-radius: 10%;
+  transition: all 200ms;
+}
+
+.nav-links button:hover {
+  background-color: #0e0e0e17;
+  border-radius: 24px;
+}
+
+/* Navbar Categories CSS */
+
+.nav-categories {
+  height: 40px;
+  width: 130px;
+  font-size: small;
+  align-content: center;
+  text-align: center;
+  border: none;
+  background: none;
+  border-radius: 10%;
+  transition: all 200ms;
+}
+
+.nav-categories:hover {
+  cursor: pointer;
+  background-color: #0e0e0e17;
+  border-radius: 24px;
+}
