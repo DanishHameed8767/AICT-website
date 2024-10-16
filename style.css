@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Segoe UI", sans-serif;
+  box-sizing: border-box;
 }
 /* Font CSS */
 .roboto-thin {
@@ -110,19 +111,19 @@ ul.nav-row {
 
 .nav-row li {
   list-style: none;
-  margin:0 30px;
+  margin: 0 30px;
   font-size: medium;
 }
 
 .nav-row li:hover {
- cursor:pointer;
+  cursor: pointer;
 }
 
 /* NavBar Brand CSS */
 
 .nav-brand {
- align-content: center;
- text-align: center;
+  align-content: center;
+  text-align: center;
 }
 
 .nav-brand a {
@@ -249,9 +250,156 @@ ul.nav-row {
   border-radius: 24px;
 }
 
-/* Responsive CSS */
-@media screen and (max-width:767px) {
+/* Main Section CSS */
 
+/* Banner Section CSS */
+section.banner {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.banner-group-container {
+  animation-name: desktop-outer-column;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 3s;
+  transform: translateY(-256px);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.group-container-reverse {
+  animation-name: desktop-inner-column;
+}
+
+.banner-container {
+  width: 80%;
+  background: #004b23;
+  color: white;
+  height: 444px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.text-tag {
+  background-color: #21b55a;
+  font-size: 14px;
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  align-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.banner-text-container h2 {
+  width: 70%;
+  font-weight: normal;
+  font-size: 45px;
+  text-wrap: wrap;
+}
+.banner-text-container button {
+  height: 50px;
+  width: 115px;
+  border-radius: 25px;
+  margin-top: 15px;
+}
+
+.banner-product {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f1641e;
+  border-radius: 15px;
+  color: black;
+  height: 190px;
+  width: 144px;
+}
+
+.product-1 {
+  background-color: rgb(140, 138, 240);
+}
+
+.product-2 {
+  background-color: #21b55a;
+}
+
+.product-3 {
+  background-color: #ccebff;
+}
+
+.product-4 {
+  background-color: #2638c0;
+}
+
+.product-5 {
+  background-color: #fdd95c;
+}
+
+.product-6{
+  background-color: #f19d27;
+}
+
+.clip-img-container {
+  border-radius: 0 0 10px 10px;
+  height: 122px;
+  overflow: hidden;
+}
+.clip-img {
+  clip-path: circle(80% at 50% 80%);
+  position: relative;
+}
+
+.banner-product-title {
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.banner-product img {
+  height: 132px;
+}
+
+/* CSS Animations */
+@keyframes desktop-outer-column {
+  0% {
+    transform: translateY(-256px);
+  }
+
+  39% {
+    transform: translateY(-1156px);
+  }
+
+  to {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes desktop-inner-column {
+  0% {
+    transform: translateY(-533px)
+}
+
+39% {
+    transform: translateY(8px)
+}
+
+to {
+    transform: translateY(-1156px)
+}
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 767px) {
   .nav-container {
     height: 100px;
     flex-direction: row;
@@ -270,19 +418,17 @@ ul.nav-row {
     order: 2;
     flex: 1 0 100%;
   }
-
 }
 
-@media screen and (max-width:514px){
+@media screen and (max-width: 514px) {
   .nav-container {
     flex-direction: row;
-
   }
-.nav-links:last-child {
-  display: none;
-}
-.nav-links {
-  width: 100%;
-  justify-content: space-between;
-}
+  .nav-links:last-child {
+    display: none;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
