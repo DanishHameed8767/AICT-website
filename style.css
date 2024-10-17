@@ -11,78 +11,6 @@
   font-family: "Roboto", "Segoe UI", sans-serif;
   box-sizing: border-box;
 }
-/* Font CSS */
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
 
 /* Navbar CSS */
 
@@ -259,6 +187,54 @@ section.banner {
   padding: 20px;
 }
 
+.banner-container {
+  width: 90%;
+  background: #004b23;
+  color: white;
+  height: 444px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+/* Banner Text CSS */
+
+.text-tag {
+  background-color: #21b55a;
+  font-size: 14px;
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  align-content: center;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.banner-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-text-container h2 {
+  width: 70%;
+  font-weight: normal;
+  font-size: 45px;
+  text-wrap: wrap;
+}
+.banner-text-container button {
+  height: 50px;
+  width: 115px;
+  border-radius: 25px;
+  margin-top: 15px;
+  border: none;
+}
+
+/* Banner Group CSS */
+
 .banner-group-container {
   animation-name: desktop-outer-column;
   animation-duration: 50s;
@@ -274,42 +250,6 @@ section.banner {
 
 .group-container-reverse {
   animation-name: desktop-inner-column;
-}
-
-.banner-container {
-  width: 80%;
-  background: #004b23;
-  color: white;
-  height: 444px;
-  overflow: hidden;
-  border-radius: 15px;
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-}
-
-.text-tag {
-  background-color: #21b55a;
-  font-size: 14px;
-  display: inline-block;
-  width: 70px;
-  height: 24px;
-  align-content: center;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.banner-text-container h2 {
-  width: 70%;
-  font-weight: normal;
-  font-size: 45px;
-  text-wrap: wrap;
-}
-.banner-text-container button {
-  height: 50px;
-  width: 115px;
-  border-radius: 25px;
-  margin-top: 15px;
 }
 
 .banner-product {
@@ -369,7 +309,7 @@ section.banner {
   height: 132px;
 }
 
-/* CSS Animations */
+/* Banner Animations */
 @keyframes desktop-outer-column {
   0% {
     transform: translateY(-256px);
@@ -396,6 +336,65 @@ section.banner {
 to {
     transform: translateY(-1156px)
 }
+}
+
+/* Recent Products CSS */
+
+section.recent-products-grid {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.recent-products-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.recent-products {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.products-placeholder {
+  width: calc(100% / 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.product-box {
+  width: 100%;
+  height: 168px;
+  display: flex;
+  justify-content: start;
+}
+
+.product-box:before {
+content: "";
+background: url('https://i.etsystatic.com/21940676/c/1687/1687/479/103/il/9ddf31/6218038300/il_340x270.6218038300_ros5.jpg') no-repeat center center/cover;
+height: inherit;
+width: inherit;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+}
+
+.product-box > p {
+  font-size: 14px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid grey;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  margin-bottom: 20px ;
+  z-index: 2;
 }
 
 /* Responsive CSS */
