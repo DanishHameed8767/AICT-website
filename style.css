@@ -340,7 +340,7 @@ to {
 
 /* Recent Products CSS */
 
-section.recent-products-grid {
+section.recent-products-grid, section.favorite-trend {
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -354,48 +354,82 @@ section.recent-products-grid {
 
 .recent-products {
   display: flex;
-  justify-content: center;
+  margin-bottom: 20px;
+  justify-content: space-around;
   gap: 10px;
 }
 
+.recent-products-title {
+margin-bottom: 5px;
+}
+
 .products-placeholder {
-  width: calc(100% / 5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+width: calc(100% / 5 );
+height: 100%;
 }
 
 .product-box {
-  width: 100%;
-  height: 168px;
-  display: flex;
-  justify-content: start;
+  position: relative;
 }
 
-.product-box:before {
-content: "";
-background: url('https://i.etsystatic.com/21940676/c/1687/1687/479/103/il/9ddf31/6218038300/il_340x270.6218038300_ros5.jpg') no-repeat center center/cover;
-height: inherit;
-width: inherit;
-position: absolute;
-top: 0;
-left: 0;
-z-index: 1;
+.product-box > img {
+  max-width: 100%;
+  object-fit: cover;
 }
-
-.product-box > p {
+.product-box > span { 
   font-size: 14px;
-  background-color: white;
-  border-radius: 20px;
-  border: 1px solid grey;
-  padding: 8px 10px;
-  position: absolute;
-  bottom: 0;
-  margin-left: 20px;
-  margin-bottom: 20px ;
-  z-index: 2;
+position: absolute; 
+bottom: 0%; 
+left: 0%;
+background-color: white;
+margin-left: 5px;
+border: 1px solid gray;
+margin-bottom: 15px;
+padding: 8px 10px;
+border-radius: 25px;
 }
+
+/* Favorite Trend CSS */
+
+.favorite-trend-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.favorite-trend-title {
+  font-weight: normal;
+  text-align: center;
+font-size: 30px;
+}
+.favorite-trend-products {
+  margin-top: 40px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.favorite-product-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-product-box > span {
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 10px;
+text-align: center;
+}
+
+.favorite-product-box > img {
+  width: 100%;
+border-radius: 50%;
+
+}
+
 
 /* Responsive CSS */
 @media screen and (max-width: 767px) {
