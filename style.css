@@ -1,8 +1,8 @@
 :root {
-  --navy: #091057;
-  --blue: #024caa;
-  --orange: #ec8305;
-  --grey: #dbd3d3;
+  --primary: #387478 ;
+  --secondary: #AB886D;
+  --button: #493628;
+  --hover: #948979;
 }
 
 * {
@@ -40,7 +40,12 @@ ul.nav-row {
 .nav-row li {
   list-style: none;
   margin: 0 30px;
+}
+
+.nav-row li a {
+  text-decoration: none;
   font-size: medium;
+  color: var(--button);
 }
 
 .nav-row li:hover {
@@ -67,7 +72,7 @@ ul.nav-row {
   width: 60vw;
   display: flex;
   justify-content: center;
-  border: 2px solid var(--navy);
+  border: 2px solid var(--primary);
   border-radius: 30px;
 }
 
@@ -81,7 +86,7 @@ ul.nav-row {
 }
 
 .nav-search input:focus {
-  outline: 1px solid var(--blue);
+  outline: 1px solid var(--secondary);
   outline-offset: 5px;
 }
 
@@ -100,7 +105,7 @@ ul.nav-row {
 }
 
 .nav-search .icon-circle {
-  background-color: var(--orange);
+  background-color: var(--button);
   transition: all 200ms;
   border-radius: 50%;
   height: 40px;
@@ -122,7 +127,7 @@ ul.nav-row {
 
 .fa-heart,
 .fa-bag-shopping {
-  color: black;
+  color: var(--button);
   font-size: 20px;
   height: 40px;
   width: 40px;
@@ -144,7 +149,7 @@ ul.nav-row {
 
 .nav-links button {
   font-size: small;
-  color: black;
+  color: var(--button);
   height: 40px;
   width: 80px;
   border: none;
@@ -189,7 +194,7 @@ section.banner {
 
 .banner-container {
   width: 90%;
-  background: #004b23;
+  background: var(--primary);
   color: white;
   height: 444px;
   overflow: hidden;
@@ -202,7 +207,7 @@ section.banner {
 /* Banner Text CSS */
 
 .text-tag {
-  background-color: #21b55a;
+  background-color: var(--button);
   font-size: 14px;
   display: inline-block;
   width: 70px;
@@ -229,8 +234,14 @@ section.banner {
   height: 50px;
   width: 115px;
   border-radius: 25px;
+  background-color: var(--button);
+  color: white;
   margin-top: 15px;
   border: none;
+}
+.banner-text-container button:hover {
+  cursor: pointer;
+  background-color: var(--hover);
 }
 
 /* Banner Group CSS */
@@ -552,9 +563,12 @@ border-radius: 15px;
   font-family: 'Roboto', sans-serif;
 }
 
+footer {
+  margin-top: 50px;
+}
 
 .footer {
-    background-color: var(--blue);
+    background-color: var(--button);
     color: #fff;
 }
 .footer-wave-svg {
@@ -592,6 +606,8 @@ border-radius: 15px;
 }
 
 .footer-logo-link {
+  text-decoration: none;
+  color: white;
     display: inline-block;
 }
 .footer-menu {
@@ -686,7 +702,7 @@ border-radius: 15px;
 }
 
 .footer-copyright {
-    background-color:var(--navy);
+    background-color:var(--primary);
     color: #fff;
     padding: 15px 30px;
   text-align: center;
