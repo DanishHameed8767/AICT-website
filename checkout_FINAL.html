@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - E-commerce</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #387478;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 87%;
+            margin: 50px auto;
+            display: flex;
+            gap: 50px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.918);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Shipping Section */
+        .shipping {
+            flex: 60%;
+        }
+        .shipping h3 {
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Order Summary & Payment */
+        .order-summary {
+            flex: 40%;
+            background-color: #e4e0e1;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .order-summary h3 {
+            margin-bottom: 25px;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            line-height: 10px;
+        }
+        .summary-item img {
+            width: 40px;
+            height: 50px;
+            margin-left: 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .summary-item .product-info {
+            display: flex;
+            align-items: center;
+        }
+        .promo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .promo input {
+            width:75%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .promo button {
+            padding: 10px 20px;
+            margin-top: 5px;
+            margin-left: 10px;
+            background-color: #493628;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .promo button:hover {
+            background-color: #948979;
+        }
+        .order-summary hr {
+            margin: 0px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+        .button {
+            width: 100%;
+            background-color: #493628;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #948979;
+        }
+
+        /* Media Queries for Tablet */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                padding: 25px;
+                max-width: 90%;
+                gap: 40px;
+            }
+            .shipping, .order-summary {
+                flex: 100%;
+            }
+            .promo input {
+                width: 80%;
+            }
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                padding: 40px;
+                max-width: 95%;
+                gap: 20px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .order-summary {
+                margin-top: 20px;
+            }
+            .promo input {
+                width: 70%;
+            }
+            .promo button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            .summary-item img {
+                width: 20%;
+                height: 40px;
+            }
+            .summary-item{
+                line-height: 20px;
+            }
+            .button {
+                padding: 10px;
+                font-size: 14px;
+            } 
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Shipping Section (60%) -->
+        <div class="shipping">
+            <h3>Shipping Information</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select a Country</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="India">India</option>
+                        <option value="USA">United States</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Russia">Russia</option>
+                        <option value="UAE">UAE</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Summary & Payment Section (40%) -->
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            
+            <div class="summary-item">
+                <div class="product-info">
+                    <p>1.</p>
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Men's Varsity Jacket</p>
+                </div>
+                <p>$30.00</p>
+            </div>
+
+            <div class="summary-item">
+                <div class="product-info">
+                    <p>2.</p>
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>2pc Notebook Set</p>
+                </div>
+                <p>$20.00</p>
+            </div>
+
+            <div class="promo">
+                <input type="text" id="promo_code" name="promo_code" placeholder="Enter promo code">
+                <button type="button">Apply</button>
+            </div>
+
+            <hr>
+
+            <div class="summary-item">
+                <p>Subtotal</p>
+                <p>$50.00</p>
+            </div>
+
+            <div class="summary-item">
+                <p>Estimated Shipping</p>
+                <p>$5.99</p>
+            </div>
+
+            <div class="summary-item">
+                <strong>Total</strong>
+                <strong>$55.99</strong>
+            </div>
+
+            <hr>
+
+            <h3>Payment Information</h3>
+
+            <div class="form-group">
+                <label for="card_number">Card Number</label>
+                <input type="text" id="card_number" name="card_number" placeholder="1234 1234 1234 1234" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exp_date">Expiration Date (MM/YY)</label>
+                <input type="text" id="exp_date" name="exp_date" placeholder="MM/YY" required>
+            </div>
+
+            <div class="form-group">
+                <label for="csc">Card Security Code</label>
+                <input type="text" id="csc" name="csc" placeholder="CSC" required>
+            </div>
+
+            <!-- Place Order Button -->
+            <button type="submit" class="button">Place Order</button>
+        
+        </div>
+
+    </div>
+
+</body>
+</html>
