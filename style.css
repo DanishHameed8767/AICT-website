@@ -1,6 +1,7 @@
 :root {
   --primary: #387478 ;
   --secondary: #AB886D;
+  --accent-color:#E2f1e7;
   --button: #493628;
   --hover: #948979;
 }
@@ -12,10 +13,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--accent-color);
+}
+
 /* Navbar CSS */
+
+
 
 nav {
   border-bottom: 2px solid #0e0e0e2e;
+  background-color: #fff;
 }
 
 .nav-container {
@@ -57,13 +65,14 @@ ul.nav-row {
 .nav-brand {
   align-content: center;
   text-align: center;
+  margin-right: 30px;
 }
 
 .nav-brand a {
   text-decoration: none;
   font-weight: bold;
   font-size: x-large;
-  color: var(--orange);
+  color: var(--button);
 }
 
 /* Navbar Search Bar CSS */
@@ -580,7 +589,7 @@ footer {
     width: 100%;
 }
 .footer-wave-path {
-    fill: #fffff2;
+    fill: var(--accent-color);
 }
 
 .footer-content {

@@ -14,6 +14,7 @@
         --secondary: #ab886d;
         --button: #493628;
         --hover: #948979;
+        --accent-color:#E2f1e7;
       }
       * {
         margin: 0;
@@ -24,6 +25,7 @@
       /* Navbar CSS */
 
       nav {
+        background-color: white;
         border-bottom: 2px solid #0e0e0e2e;
       }
 
@@ -196,16 +198,16 @@
 
       body {
         font-family: "Roboto", sans-serif;
-        background: white;
+        background-color: var(--accent-color);
         margin: 0;
         padding: 0;
       }
       .container {
         height: auto;
-        width: 80%;
+        width: 50%;
         margin: 60px auto;
         background-color: var(--primary);
-        padding: 20px;
+        padding: 40px;
         text-align: center;
         border-radius: 10px;
         display: flex;
@@ -229,6 +231,7 @@
       }
       h1,
       h2 {
+        margin-bottom: 15px;
         color: white;
         transition: color 0.3s ease;
         text-decoration: none;
@@ -239,10 +242,9 @@
         font-size: medium;
         text-align: start;
         color: white;
-        margin: 10px;
       }
       img {
-        width: 30%;
+        width: 50%;
         height: 300px;
         border-radius: 10px;
       }
@@ -251,6 +253,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 25px;
       }
 
       #box-2, #box-4 {
@@ -276,8 +279,9 @@
         width: 100%;
       }
       .footer-wave-path {
-        fill: #fffff2;
-      }
+    fill: var(--accent-color);
+}
+
 
       .footer-content {
         margin-left: auto;
@@ -479,12 +483,10 @@
 
       /* Responsive CSS */
 
-      @media only screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         h1 {
           font-size: 1.5rem;
         }
-      }
-      @media screen and (max-width: 768px) {
         .nav-container {
           height: 100px;
           flex-direction: row;
@@ -502,6 +504,9 @@
         .nav-search {
           order: 2;
           flex: 1 0 100%;
+        }
+        .box-container {
+          flex-direction: column;
         }
       }
     </style>
