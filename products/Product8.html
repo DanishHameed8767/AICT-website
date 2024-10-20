@@ -7,14 +7,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <title>ABOUT US</title>
+    <title>Product Detail</title>
     <style>
       :root {
         --primary: #387478;
         --secondary: #ab886d;
         --button: #493628;
         --hover: #948979;
-        --accent-color:#E2f1e7;
+        --accent-color: #e2f1e7;
       }
       * {
         margin: 0;
@@ -25,8 +25,8 @@
       /* Navbar CSS */
 
       nav {
-        background-color: white;
         border-bottom: 2px solid #0e0e0e2e;
+        background-color: white;
       }
 
       .nav-container {
@@ -51,10 +51,6 @@
       .nav-row li {
         list-style: none;
         margin: 0 30px;
-      }
-
-      .nav-row li a {
-        text-decoration: none;
         font-size: medium;
         color: var(--button);
       }
@@ -63,6 +59,11 @@
         cursor: pointer;
       }
 
+      .nav-row li a {
+  text-decoration: none;
+  font-size: medium;
+  color: var(--button);
+      }
       /* NavBar Brand CSS */
 
       .nav-brand {
@@ -135,7 +136,10 @@
         display: flex;
         margin: 0 10px;
       }
-
+      .nav-links a {
+  text-decoration: none;
+  margin: 0 10px;
+}
       .fa-heart,
       .fa-bag-shopping {
         color: var(--button);
@@ -157,7 +161,6 @@
         text-decoration: none;
         margin: 0 10px;
       }
-      
 
       .nav-links button {
         font-size: small;
@@ -179,69 +182,140 @@
       /* Main Section CSS */
 
       body {
-        font-family: "Roboto", sans-serif;
+        font-family: Arial, sans-serif;
         background-color: var(--accent-color);
-        margin: 0;
-        padding: 0;
       }
       .container {
-        height: auto;
-        width: 50%;
-        margin: 60px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 50px 0;
+      }
+      .image {
+        padding: 30px 30px;
+        display: flex;
         background-color: var(--primary);
-        padding: 40px;
-        text-align: center;
-        border-radius: 10px;
-        display: flex;
+        width: 40%;
+        /* height: 500px; */
         justify-content: center;
         align-items: center;
+      }
+      .image img {
+        width: 100%;
+        height: 400px;
+        object-fit: fill;
+      }
+      .title {
+        width: 40%;
+        align-items: start;
+        justify-content: start;
+        font-size: 20px;
+        /* width:50%; */
+        display: flex;
         flex-direction: column;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        gap: 15px;
       }
-      .container:hover {
-        box-shadow: 4px 20px 20px rgba(0, 0, 0, 0.8);
-      }
-      .item {
-        border: 3px solid #001f3f;
-        border-radius: 5px;
-        margin: 20px;
-        min-height: 20px;
-        transition: scale(1.05);
-      }
-      .item:hover {
-        transform: scale(1.05);
-      }
-      h1,
-      h2 {
-        margin-bottom: 15px;
-        color: white;
-        transition: color 0.3s ease;
-        text-decoration: none;
+      .title > h2 {
+        color: var(--button);
       }
 
-      p {
-        line-height: 1.6;
-        font-size: medium;
-        text-align: start;
+      .description ul {
+        margin-left: 20px;
+      }
+      .cart {
+        background-color: var(--button);
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
         color: white;
       }
-      img {
-        width: 50%;
-        height: 300px;
-        border-radius: 10px;
+      .cart:hover {
+        background-color: var(--hover);
+        cursor: pointer;
+      }
+      .stock {
+        color: lightgreen;
+      }
+      .amount {
+        color: var(--button);
+      }
+      .dollar {
+        color: var();
       }
 
-      .box-container {
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .title {
+          width: 90%;
+        }
+        .image {
+          width: 90%;
+        }
+      }
+      /* Recent Products CSS */
+
+      section.recent-products-grid,
+      section.favorite-trend,
+      section.featured-categories-grid,
+      section.extra-ordinary-items-grid {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 25px;
+        padding: 20px;
       }
 
-      #box-2, #box-4 {
-        flex-direction: row-reverse;
+      .recent-products-container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
       }
-      
+
+      .recent-products {
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 10px;
+      }
+
+      .recent-products-title {
+        margin-bottom: 5px;
+      }
+
+      .products-placeholder {
+        flex: 1 1 calc(20% - 10px);
+        /* height: 100%; */
+      }
+
+      .product-box {
+        height: 194px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .product-box > img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+      }
+      .product-box > span {
+        font-size: 14px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        background-color: white;
+        margin-left: 5px;
+        border: 1px solid gray;
+        margin-bottom: 15px;
+        padding: 8px 10px;
+        border-radius: 25px;
+      }
+
       /* Footer CSS */
 
       .pg-footer {
@@ -261,9 +335,8 @@
         width: 100%;
       }
       .footer-wave-path {
-    fill: var(--accent-color);
-}
-
+        fill: var(--accent-color);
+      }
 
       .footer-content {
         margin-left: auto;
@@ -466,9 +539,6 @@
       /* Responsive CSS */
 
       @media screen and (max-width: 768px) {
-        h1 {
-          font-size: 1.5rem;
-        }
         .nav-container {
           height: 100px;
           flex-direction: row;
@@ -487,8 +557,27 @@
           order: 2;
           flex: 1 0 100%;
         }
-        .box-container {
-          flex-direction: column;
+        section.recent-products-grid,
+        section.favorite-trend,
+        section.featured-categories-grid,
+        section.extra-ordinary-items-grid {
+          padding: 20px 0px;
+        }
+        .recent-products {
+          flex-wrap: wrap;
+        }
+
+        .product-box > img {
+          object-fit: cover;
+        }
+        .products-placeholder {
+          flex: 1 1 calc(25% - 10px); /* Each product takes 50% width for tablets */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .products-placeholder {
+          flex: 1 1 100%; /* Each product takes full width for mobile */
         }
       }
     </style>
@@ -499,7 +588,7 @@
         <div class="nav-row">
           <div class="nav-links">
             <div class="nav-brand">
-              <a href="index.html">StyleVerse</a>
+              <a href="/">StyleVerse</a>
             </div>
           </div>
           <div class="nav-search">
@@ -512,14 +601,12 @@
           </div>
           <div class="nav-links">
             <a href="login.html">
-            <button href="login.html" class="">
-              Sign in
-            </button>
-          </a>
+              <button href="#" class="">Sign in</button>
+            </a>
             <a href="#" class="nav-wishlist"
               ><i class="fa-solid fa-heart"></i
             ></a>
-            <a href="Cart.html" class="nav-cart"
+            <a href="#" class="nav-cart"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </div>
@@ -527,76 +614,127 @@
         <ul class="nav-row">
           <li><a href="about-us.html">About us</a></li>
           <li><a href="contact-us.html">Contact us</a></li>
-          <li><a>Home Favourites</a></li>
-          <li><a>Registery</a></li>
+          <li>Home Favourites</li>
+          <li>Registery</li>
         </ul>
       </div>
     </nav>
     <main>
       <div class="container">
-        <h1>About Us</h1>
-        <div class="box-container">
-          <p>
-            Welcome to StyleVerse, your one-stop destination for all your shopping
-            needs. We are passionate about bringing you the latest and greatest
-            products, offering a diverse range from categories like fashion,
-            electronics, home goods, etc. to cater to your lifestyle.
-          </p>
-          <img src="img/Shoes.png" />
+        <div class="image">
+          <img src="img/img9.jpg" />
+        </div>
+        <div class="title">
+          <h2>5-Piece Metallic Pencil Set</h2>
+          <div class="stock">In Stock</div>
+          <div class="amount"><strike class="dollar">$199.99</strike> $176</div>
+          <div class="description">
+            Add a touch of shine to your artwork or notes with this vibrant
+            5-Piece Metallic Pencil Set. Each pencil features a rich, metallic
+            finish that glides smoothly on paper, making them perfect for
+            drawing, coloring, or adding special effects to your projects. Ideal
+            for artists, students, and craft enthusiasts, this set is a
+            must-have for anyone looking to enhance their creative
+            expressions.<br /><br />
+            Key Features:
+            <ul>
+              <li>
+                Set includes five metallic colors: [insert colors, e.g., gold,
+                silver, bronze, blue, and green]
+              </li>
+              <li>Smooth application for easy blending and shading</li>
+              <li>Durable lead that resists breaking</li>
+              <li>Ideal for a variety of surfaces, including dark paper</li>
+              <li>Perfect for art projects, journaling, or decorating notes</li>
+              <li>Dimensions:</li>
+              <li>Pencil Length: [insert length, e.g., 7 inches]</li>
+            </ul>
+          </div>
+
+          <button class="cart">Add to Cart</button>
         </div>
       </div>
-      <div class="container">
-        <h2>Who We Are</h2>
-        <div class="box-container" id="box-2">
-        <p>
-          At StyleVerse , we pride ourselves on being more than just an
-          e-commerce store. Our team is a group of passionate individuals who
-          believe in the power of convenience and innovation. We aim to create a
-          shopping platform that combines the best products, great deals, and
-          exceptional service, making your shopping journey enjoyable and
-          hassle-free.
-        </p>
-        <img src="img/Beauty 2.png" /></div>
-      </div>
-      <div class="container">
-        <h2>Our Mission</h2>
-        <div class="box-container">
-        <p>
-          Our mission is simple yet powerful: to provide quality products at
-          competitive prices, all while ensuring a seamless shopping experience
-          for our customers. We believe in the value of choice, which is why we
-          offer a wide variety of products, from Fashion, Electronics, Home
-          Essentials, Beauty, and more. Every item we carry is carefully
-          selected to meet the diverse needs of our customers.
-        </p>
-        <img src="img/Laptop.png" /></div>
-      </div>
-      <div class="container">
-        <h2>Our Journey</h2>
-        <div class="box-container" id="box-4">
-        <p>
-          What started as a small business has grown into a trusted online store
-          with a loyal customer base. Over the years, we have built a reputation
-          for providing outstanding service and unbeatable deals. Our journey
-          has been fueled by our dedication to constantly evolving to meet the
-          changing needs of our customers, and we continue to grow with the same
-          passion and drive that got us started.
-        </p>
-        <img src="img/Beauty 3.png" /></div>
-      </div>
-      <div class="container">
-        <h2>Join Our Community</h2>
-        <div class="box-container">
-        <p>
-          At StyleVerse, we don’t just want you to shop – we want you to join our
-          community. Subscribe to our newsletter, follow us on social media, and
-          stay up to date with the latest products, exclusive deals, and
-          exciting news. Thank you for choosing StyleVerse. We’re excited to
-          serve you and to continue building a shopping experience that you’ll
-          love.
-        </p>
-        <img src="img/Clothes.png" /></div>
-      </div>
+      <section class="recent-products-grid">
+        <div class="recent-products-container">
+          <h3 class="recent-products-title">You may also like</h3>
+          <div class="recent-products">
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img1.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img2.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img3.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img5.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img6.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img7.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img8.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img9.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img src="img/img10.jpg" alt="" />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+            <div class="products-placeholder">
+              <div class="product-box">
+                <img
+                  src="https://i.etsystatic.com/22287963/c/1538/1538/730/100/il/e94035/6314362024/il_340x270.6314362024_70zt.jpg"
+                  alt=""
+                />
+
+                <span>USD 33.25 <strike>USD 47.50</strike></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="pg-footer">

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Get in Touch</title>
+    <style>
+      :root {
+        --primary: #387478;
+        --secondary: #ab886d;
+        --button: #493628;
+        --hover: #948979;
+        --accent-color: #e2f1e7;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+
+      /* Navbar CSS */
+
+      nav {
+        background-color: white;
+        border-bottom: 2px solid #0e0e0e2e;
+      }
+
+      .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10px;
+      }
+
+      .nav-row {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+      }
+
+      ul.nav-row {
+        justify-content: center;
+        height: 40px;
+      }
+
+      .nav-row li {
+        list-style: none;
+        margin: 0 30px;
+      }
+
+      .nav-row li a {
+        text-decoration: none;
+        font-size: medium;
+        color: var(--button);
+      }
+
+      .nav-row li:hover {
+        cursor: pointer;
+      }
+
+      /* NavBar Brand CSS */
+
+      .nav-brand {
+        align-content: center;
+        text-align: center;
+      }
+
+      .nav-brand a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: x-large;
+        color: var(--orange);
+      }
+
+      /* Navbar Search Bar CSS */
+
+      .nav-search {
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        border: 2px solid var(--primary);
+        border-radius: 30px;
+      }
+
+      .nav-search input {
+        width: 100%;
+        height: 45px;
+        border: none;
+        padding: 0 8px;
+        border-radius: 30px 0 0 30px;
+        margin-right: 5px;
+      }
+
+      .nav-search input:focus {
+        outline: 1px solid var(--secondary);
+        outline-offset: 5px;
+      }
+
+      .nav-search input:focus ~ .search-icon > .icon-circle,
+      .nav-search input:hover ~ .search-icon > .icon-circle {
+        height: 45px;
+        margin-right: 0;
+        border-radius: 0 50% 50% 0;
+      }
+
+      .nav-search .search-icon {
+        width: 50px;
+        border: none;
+        align-content: center;
+        text-align: center;
+      }
+
+      .nav-search .icon-circle {
+        background-color: var(--button);
+        transition: all 200ms;
+        border-radius: 50%;
+        height: 40px;
+        margin-right: 5px;
+        align-content: center;
+        text-align: center;
+      }
+
+      .nav-search .fa-magnifying-glass {
+        color: white;
+      }
+
+      /* Navbar Links CSS */
+
+      .nav-links {
+        display: flex;
+        margin: 0 10px;
+      }
+
+      .fa-heart,
+      .fa-bag-shopping {
+        color: var(--button);
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        align-content: center;
+        border-radius: 20%;
+        transition: all 200ms;
+      }
+      .fa-heart:hover,
+      .fa-bag-shopping:hover {
+        background-color: #0e0e0e17;
+        border-radius: 50%;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .nav-links button {
+        font-size: small;
+        color: var(--button);
+        height: 40px;
+        width: 80px;
+        border: none;
+        background: none;
+        border-radius: 10%;
+        transition: all 200ms;
+      }
+
+      .nav-links button:hover {
+        cursor: pointer;
+        background-color: #0e0e0e17;
+        border-radius: 24px;
+      }
+
+      /* Main Section CSS */
+
+      main {
+        background-color: var(--accent-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        border: 30px solid var(--primary);
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+      .contact-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .text-container {
+        width: 60%;
+      }
+
+      .text-container > h2 {
+        margin-top: 10px;
+      }
+
+      .text-container > p {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+
+      h2 {
+        margin-top: 10px;
+        font-size: 32px;
+        color: var(--button);
+      }
+
+      label {
+        display: block;
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      form {
+        width: 80%;
+        padding: 20px 0;
+      }
+
+      input,
+      textarea {
+        /* border: none; */
+        width: 100%;
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: 1px solid var(--button);
+        outline-offset: 2px;
+      }
+
+      button {
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 18px;
+        background-color: var(--button);
+        width: 100%;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: var(--hover);
+      }
+
+      /* Footer CSS */
+
+      .pg-footer {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .footer {
+        background-color: var(--button);
+        color: #fff;
+      }
+      .footer-wave-svg {
+        background-color: transparent;
+        display: block;
+        height: 30px;
+        position: relative;
+        top: -1px;
+        width: 100%;
+      }
+      .footer-wave-path {
+        fill: var(--accent-color);
+      }
+
+      .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 450px;
+        position: relative;
+      }
+
+      .footer-content-column {
+        box-sizing: border-box;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        color: #fff;
+      }
+
+      .footer-content-column ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-logo-link {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+      }
+      .footer-menu {
+        margin-top: 30px;
+      }
+
+      .footer-menu-name {
+        color: #fffff2;
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        line-height: 18px;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+      .footer-menu-list {
+        list-style: none;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-left: 0;
+      }
+      .footer-menu-list li {
+        margin-top: 5px;
+      }
+
+      .footer-call-to-action-description {
+        color: #fffff2;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .footer-call-to-action-button:hover {
+        background-color: #fffff2;
+        color: #00bef0;
+      }
+      .button:last-of-type {
+        margin-right: 0;
+      }
+      .footer-call-to-action-button {
+        background-color: #027b9a;
+        border-radius: 21px;
+        color: #fffff2;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        line-height: 18px;
+        padding: 12px 30px;
+        margin: 0 10px 10px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.2s;
+        cursor: pointer;
+        position: relative;
+      }
+      .footer-call-to-action {
+        margin-top: 30px;
+      }
+      .footer-call-to-action-title {
+        color: #fffff2;
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        line-height: 18px;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+      .footer-call-to-action-link-wrapper {
+        margin-bottom: 0;
+        margin-top: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer-call-to-action-link-wrapper a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .hidden-link-text {
+        position: absolute;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+        clip-path: inset(0px 0px 99.9% 99.9%);
+        overflow: hidden;
+        height: 1px;
+        width: 1px;
+        padding: 0;
+        border: 0;
+        top: 50%;
+      }
+
+      .footer-copyright {
+        background-color: var(--primary);
+        color: #fff;
+        padding: 15px 30px;
+        text-align: center;
+      }
+
+      .footer-copyright-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+      }
+
+      .footer-copyright-text {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .footer-copyright-link {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Media Query For different screens */
+      @media (min-width: 320px) and (max-width: 479px) {
+        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+        .footer-content {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1230px;
+          padding: 40px 15px 1050px;
+          position: relative;
+        }
+      }
+      @media (min-width: 480px) and (max-width: 599px) {
+        /* smartphones, Android phones, landscape iPhone */
+        .footer-content {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1230px;
+          padding: 40px 15px 1050px;
+          position: relative;
+        }
+      }
+      @media (min-width: 600px) and (max-width: 800px) {
+        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+        .footer-content {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1230px;
+          padding: 40px 15px 1050px;
+          position: relative;
+        }
+      }
+
+      @media (min-width: 760px) {
+        .footer-content {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1230px;
+          padding: 40px 15px 450px;
+          position: relative;
+        }
+
+        .footer-wave-svg {
+          height: 50px;
+        }
+
+        .footer-content-column {
+          width: 24.99%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .nav-container {
+          height: 100px;
+          flex-direction: row;
+        }
+        nav {
+          padding: 10px;
+        }
+        .nav-container ul {
+          display: none;
+        }
+        .nav-row {
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        .nav-search {
+          order: 2;
+          flex: 1 0 100%;
+        }
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+        <div class="nav-container">
+          <div class="nav-row">
+            <div class="nav-links">
+              <div class="nav-brand">
+                <a href="index.html">StyleVerse</a>
+              </div>
+            </div>
+            <div class="nav-search">
+              <input type="text" placeholder="Search for anything" />
+              <div class="search-icon">
+                <div class="icon-circle">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+            <div class="nav-links">
+              <a href="login.html">
+              <button href="login.html" class="">
+                Sign in
+              </button>
+            </a>
+              <a href="#" class="nav-wishlist"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+              <a href="Cart.html" class="nav-cart"
+                ><i class="fa-solid fa-bag-shopping"></i
+              ></a>
+            </div>
+          </div>
+          <ul class="nav-row">
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li><a>Home Favourites</a></li>
+            <li><a>Registery</a></li>
+          </ul>
+        </div>
+      </nav>
+    <main>
+      <div class="container">
+        <div class="contact-info">
+          <div class="text-container">
+            <h2>Contact Us:</h2>
+            <p>
+              We’re here to help! At StyleVerse, your satisfaction is our top
+              priority. Whether you have questions about our products, need
+              assistance with your order, or just want to share your feedback,
+              we’d love to hear from you. Reach out to us through our contact
+              form, and our dedicated team will get back to you as soon as
+              possible. Thank you for choosing StyleVerse—where style meets
+              convenience!.
+            </p>
+            <p><strong>Email:</strong> getinfo@gmail.com</p>
+            <p><strong>Phone No:</strong> +92 332 333 4444</p>
+            <p>
+              <strong>Address: </strong> 123 E-commerce, St-111, City: Lahore,
+              Pakistan
+            </p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2>Get in Touch:</h2>
+          <form>
+            <div class="form-group">
+              <label for="name"><strong>Name</strong></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email"><strong>Email</strong></label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message"><strong>Message</strong></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="7"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="pg-footer">
+          <footer class="footer">
+            <svg
+              class="footer-wave-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 100"
+              preserveAspectRatio="none"
+            >
+              <path
+                class="footer-wave-path"
+                d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+              ></path>
+            </svg>
+            <div class="footer-content">
+              <div class="footer-content-column">
+                <div class="footer-logo">
+                  <a class="footer-logo-link" href="#">
+                    <span class="hidden-link-text">LOGO</span>
+                    <h1>StyleVerse</h1>
+                  </a>
+                </div>
+                <div class="footer-menu">
+                  <h2 class="footer-menu-name">Get Started</h2>
+                  <ul id="menu-get-started" class="footer-menu-list">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-product"
+                    >
+                      <a href="#">Start</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-product"
+                    >
+                      <a href="#">Documentation</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-product"
+                    >
+                      <a href="#">Installation</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-content-column">
+                <div class="footer-menu">
+                  <h2 class="footer-menu-name">Company</h2>
+                  <ul id="menu-company" class="footer-menu-list">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                    >
+                      <a href="#">Contact</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-taxonomy menu-item-object-category"
+                    >
+                      <a href="#">News</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                    >
+                      <a href="#">Careers</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-menu">
+                  <h2 class="footer-menu-name">Legal</h2>
+                  <ul id="menu-legal" class="footer-menu-list">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434"
+                    >
+                      <a href="#">Privacy Notice</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                    >
+                      <a href="#">Terms of Use</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-content-column">
+                <div class="footer-menu">
+                  <h2 class="footer-menu-name">Quick Links</h2>
+                  <ul id="menu-quick-links" class="footer-menu-list">
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom"
+                    >
+                      <a target="_blank" rel="noopener noreferrer" href="#"
+                        >Support Center</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom"
+                    >
+                      <a target="_blank" rel="noopener noreferrer" href="#"
+                        >Service Status</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                    >
+                      <a href="#">Security</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                    >
+                      <a href="#">Blog</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type_archive menu-item-object-customer"
+                    >
+                      <a href="#">Customers</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                    >
+                      <a href="#">Reviews</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-content-column">
+                <div class="footer-call-to-action">
+                  <h2 class="footer-call-to-action-title">Let's Chat</h2>
+                  <p class="footer-call-to-action-description">
+                    Have a support question?
+                  </p>
+                  <a
+                    class="footer-call-to-action-button button"
+                    href="#"
+                    target="_self"
+                  >
+                    Get in Touch
+                  </a>
+                </div>
+                <div class="footer-call-to-action">
+                  <h2 class="footer-call-to-action-title">You Call Us</h2>
+                  <p class="footer-call-to-action-link-wrapper">
+                    <a
+                      class="footer-call-to-action-link"
+                      href="tel:0124-64XXXX"
+                      target="_self"
+                    >
+                      0321-0000000
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="footer-copyright-wrapper">
+                <p class="footer-copyright-text">
+                  <a class="footer-copyright-link" href="#" target="_self">
+                    ©2024. | StyleVerse | All rights reserved.
+                  </a>
+                </p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </footer>
+  </body>
+</html>
