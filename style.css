@@ -168,6 +168,7 @@ ul.nav-row {
 }
 
 .nav-links button:hover {
+  cursor: pointer;
   background-color: #0e0e0e17;
   border-radius: 24px;
 }

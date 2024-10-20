@@ -157,6 +157,7 @@
         text-decoration: none;
         margin: 0 10px;
       }
+      
 
       .nav-links button {
         font-size: small;
@@ -170,25 +171,6 @@
       }
 
       .nav-links button:hover {
-        background-color: #0e0e0e17;
-        border-radius: 24px;
-      }
-
-      /* Navbar Categories CSS */
-
-      .nav-categories {
-        height: 40px;
-        width: 130px;
-        font-size: small;
-        align-content: center;
-        text-align: center;
-        border: none;
-        background: none;
-        border-radius: 10%;
-        transition: all 200ms;
-      }
-
-      .nav-categories:hover {
         cursor: pointer;
         background-color: #0e0e0e17;
         border-radius: 24px;
@@ -519,10 +501,6 @@
             <div class="nav-brand">
               <a href="index.html">StyleVerse</a>
             </div>
-            <div class="nav-categories">
-              <i class="fa-solid fa-bars"></i>
-              Categories
-            </div>
           </div>
           <div class="nav-search">
             <input type="text" placeholder="Search for anything" />
@@ -533,11 +511,15 @@
             </div>
           </div>
           <div class="nav-links">
-            <button href="#" class=""><a href="">Sign in</a></button>
+            <a href="login.html">
+            <button href="login.html" class="">
+              Sign in
+            </button>
+          </a>
             <a href="#" class="nav-wishlist"
               ><i class="fa-solid fa-heart"></i
             ></a>
-            <a href="#" class="nav-cart"
+            <a href="Cart.html" class="nav-cart"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </div>

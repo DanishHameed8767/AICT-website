@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e2f1e7;
+        margin: 5px;
+        padding: 5px;
+      }
+      h1{
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+      }
+      h2 {
+        text-align: left;
+        margin-left: 100px;
+      }
+      .form-container {
+        display: flex;
+        border: 2px solid;
+        flex-direction: column;
+        width: 60%;
+        margin: 100px;
+        background-color: #387478;
+        padding: 25px;
+        margin-top: 30px;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        width: 90%;
+        padding: 15px;
+        margin: 40px;
+        box-sizing: border box;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: white;
+      }
+      .box3 {
+        display: flex;
+        height: 50px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding : auto 10px;
+        background-color: beige;
+      }
+      .box input,
+      .box select,
+      .box testarea {
+        width: 60%;
+        padding: 8px;
+        box-sizing: border box;
+        font-size: 16px;
+      }
+      .detail1 {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+      }
+      .detail2 {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+      }
+      .apply {
+       color: red;
+      }
+      .amount {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+      .number {
+        display: flex;
+        border: 2px solid;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+      .product {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-size: 20px;
+      }
+      img {
+        border-radius: 5px;
+      }
+      .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: beige;
+      }
+      .box2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: beige;
+      }
+      .delete img {
+        width: 25px;
+        height: auto;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .delete img:hover {
+        transform: scale(1.2);
+        opacity: 0.8;
+        fill: red;
+      }
+      .shopping {
+        display: flex;
+        border: 1px solid;
+        border-radius: 18px;
+        padding: 5px;
+        margin: auto;
+        background-color: #e2f1e7;
+        width: 180px;
+        justify-content: center;
+      }
+      .shopping:hover{
+        background-color: rgb(206, 221, 219);
+      }
+      .box4{
+        display: flex;
+      }
+      .encrypt{
+          display: flex;
+          align-items: center;
+          padding-left: 110px;
+          gap: 6px;
+        }
+        .price{
+        color: orangered;
+      }
+      .name{
+          font-size: 14px;
+          padding: 20px;
+          width: 50px;
+        }
+        .right{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          height: 248px;
+          border: 2px solid;
+          padding: 15px;
+          background-color: #387478;
+          position: fixed;
+          left: 1020px;
+          top: 20px;
+          border-radius: 10px;
+        }
+        .stick{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 240px;
+          height: 280px;
+          border-radius: 10px;
+          background-color: #e2f1e7;
+          gap: 20px;
+        }
+        .summary{
+          padding: 10px;
+          padding-top: 40px;
+          font-weight: bold;
+        }
+        .rec{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .total{
+          display: flex;
+          gap: 55px;
+          padding: 10px;
+          border: 1px solid;
+          border-radius: 25px;
+          width: 210px;
+          height: 13px;
+          margin: 5px;
+          background-color: beige;
+        }
+        .dollar{
+          color: orangered;
+        }
+        .no{
+          display: flex;
+          padding: 10px;
+          border: 1px solid;
+          border-radius: 25px;
+          width: 210px;
+          height: 13px;
+          margin: 5px;
+          gap: 120px;
+          background-color: beige;
+        }
+        .checkout{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          border: 1px solid;
+          border-radius: 25px;
+          width: 210px;
+          height: 13px;
+          margin: 5px;
+          background-color: beige;
+        }
+        </style>
+  </head>
+  <body>
+    <main>
+      <div class="right">
+        <div class="stick">
+          <div class="summary">Order Summary</div>
+          <div class="rec">
+          <div class="total">
+          <div class="items">Total(2 items)</div>
+          <div class="dollar">$179.98</div>
+        </div>
+        <div class="no">
+        <div class="final">Discount</div>
+        <div class="percent">0%</div>
+        </div>
+            <div class="last">
+        <div class="checkout">
+              <a href="">Continue to Checkout</a>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div class="encrypt">
+            <div><img src="lock.svg" width="20px"></div>
+        <h1>All data is encrypted.</h1>
+    </div>
+      <h2>SHOPPING CART</h2>
+      <div class="form-container">
+        <form action="#" method="POST">
+          <div class="box box1">
+            <div class="detail1">
+              <div class="product">
+                <img src="img/img1.jpg" width="115" />
+                <div>Men's Varsity Jacket</div>
+              </div>
+              <div class="amount">
+                <input
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="99"
+                  value="1"
+                  step="1"
+                />
+              </div>
+              <div class="price">$129.99 </div>
+              <div class="delete">
+                <img src="delete.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="box box2">
+            <div class="detail1">
+              <div class="product">
+                <img src="img/img2.jpg" width="150" />
+                <div>2pc Notebook Set</div>
+              </div>
+              <div class="amount">
+                <input
+                  type="number"
+                  name="need"
+                  required
+                  min="1"
+                  max="99"
+                  value="1"
+                  step="1"
+                />
+              </div>
+              <div class="price">$49.99</div>
+              <div class="delete">
+                <img src="delete.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="box box3">
+            <label for="name" class="name">DISCOUNT CODE</label>
+            <input
+              type="text"
+              id="code"
+              name="code"
+              min="1000"
+              max="9999"
+              placeholder="XXXX"
+            />
+            <div class="apply">
+              Applied
+            </div>
+          </div>
+          <div class="box4">
+            <div class="shopping">
+              <a href="">Continue Shopping</a>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
